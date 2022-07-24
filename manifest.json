@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "testExtension",
+  "description": "none",
+  "version": "1.0",
+  "permissions": ["tabs", "downloads", "storage"],
+  "background": { "scripts": ["jszip.js", "FileSaver.js", "background.js"] },
+  "content_scripts": [
+    {
+      "matches": ["*://*.unsee.cc/album*"],
+      "js": ["jquery.min.js", "main.js"]
+    }
+  ]
+}
